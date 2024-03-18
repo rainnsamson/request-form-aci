@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACI Registrar Document Request Monitoring</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+       
+        <div class="title">
+            AGUSAN COLLEGES, INCORPORATED
+        </div>
+        <div class="subtitle">
+            DEPARTMENT OF REGISTRATION AND RECORDS MANAGEMENT<br>
+            M.H. Del Pilar St, Butuan City, Agusan Del Norte
+        </div>
+    </header>
+
+    <main>
+        <h1>ACI Registrar Document Request Monitoring</h1>
+        <form id="documentRequestForm" action="submit.php" method="POST">
+            <label for="idNumber">ID Number:</label>
+            <input type="text" id="idNumber" name="idNumber" required><br>
+
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required><br>
+
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required><br>
+
+            <label for="middleName">Middle Name:</label>
+            <input type="text" id="middleName" name="middleName"><br>
+
+            <label for="documentRequest">Document Request:</label>
+            <select id="documentRequest" name="documentRequest" required>
+                <option value="">Select Document Request</option>
+                <option value="CTC/Informative/GMC">CTC/Informative/GMC</option>
+                <option value="TOR-Employment">TOR-Employment</option>
+                <option value="TOR-Promotion">TOR-Promotion</option>
+                <!-- Add more options as needed -->
+            </select><br>
+
+            <label for="purpose">Purpose:</label>
+            <textarea id="purpose" name="purpose" rows="4" required></textarea><br>
+
+            <label for="controlNumber">Control Number:</label>
+            <input type="text" id="controlNumber" name="controlNumber"><br>
+
+            <label for="orNumber">OR Number:</label>
+            <input type="text" id="orNumber" name="orNumber"><br>
+
+            <label for="dateRequested">Date Requested:</label>
+            <input type="date" id="dateRequested" name="dateRequested" required><br>
+
+            <label for="dateIssued">Date Issued:</label>
+            <input type="date" id="dateIssued" name="dateIssued"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <div class="table-container">
+        <h2>Document Requests Status</h2>
+        <table id="documentRequestsTable">
+            <thead>
+                <tr>
+                    <th>ID Number</th>
+                    <th>Surname</th>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
+                    <th>Document Request</th>
+                    <th>Purpose</th>
+                    <th>Control Number</th>
+                    <th>OR Number</th>
+                    <th>Date Requested</th>
+                    <th>Date Issued</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table body will be populated with submitted data -->
+            </tbody>
+        </table>
+    </div>
+   
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./app.js"></script>
+    
+
+</body>
+</html>
